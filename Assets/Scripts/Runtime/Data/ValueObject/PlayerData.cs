@@ -1,6 +1,6 @@
 using System;
 
-namespace Runtime.Data.ValueObjects
+namespace Runtime.Data.ValueObject
 {
     [Serializable]
     public struct PlayerData

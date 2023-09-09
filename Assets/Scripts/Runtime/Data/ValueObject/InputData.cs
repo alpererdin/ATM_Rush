@@ -1,7 +1,7 @@
 using System;
 using Unity.Mathematics;
 
-namespace Runtime.Data.ValueObjects
+namespace Runtime.Data.ValueObject
 {
     [Serializable]
     public struct InputData

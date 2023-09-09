@@ -1,4 +1,4 @@
-using Runtime.Data.ValueObjects;
+using Runtime.Data.ValueObject;
 using Runtime.Keys;
 using Runtime.Managers;
 using Runtime.Signals;

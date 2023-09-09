@@ -1,7 +1,7 @@
 using System.Collections;
 using Runtime.Controllers.Player;
-using Runtime.Data.UnityObjects;
-using Runtime.Data.ValueObjects;
+using Runtime.Data.UnityObject;
+using Runtime.Data.ValueObject;
 using Runtime.Enums;
 using Runtime.Keys;
 using Runtime.Signals;

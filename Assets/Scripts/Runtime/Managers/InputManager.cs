@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using Runtime.Data.UnityObjects;
-using Runtime.Data.ValueObjects;
+using Runtime.Data.UnityObject;
+using Runtime.Data.ValueObject;
 using Runtime.Keys;
 using Runtime.Signals;
 using Sirenix.OdinInspector;
