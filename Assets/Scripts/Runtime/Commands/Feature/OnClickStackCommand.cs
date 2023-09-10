@@ -6,6 +6,7 @@ namespace Runtime.Commands.Feature
 {
     public class OnClickStackCommand
     {
+        ///
         private FeatureManager _featureManager;
         private byte _stackLevel;
         private int _newPriceTag;
