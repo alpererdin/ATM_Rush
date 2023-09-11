@@ -6,17 +6,16 @@ namespace Runtime.Controllers.Player
 {
     public class PlayerAnimationController : MonoBehaviour
     {
+        #region Self Variables
 
-        #region self Variables
-
-        #region SerilaziedVariables
+        #region Serialized Variables
 
         [SerializeField] private Animator animator;
-        
 
         #endregion
 
         #endregion
+
         private void OnEnable()
         {
             SubscribeEvents();
@@ -31,14 +30,15 @@ namespace Runtime.Controllers.Player
         {
             animator.SetTrigger(animationState.ToString());
         }
-        private void UnsubscribeEvents()
+
+        private void UnSubscribeEvents()
         {
             PlayerSignals.Instance.onChangePlayerAnimationState -= OnChangeAnimationState;
         }
 
         private void OnDisable()
         {
-            UnsubscribeEvents();
+            UnSubscribeEvents();
         }
 
         internal void OnReset()

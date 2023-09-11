@@ -8,14 +8,12 @@ namespace Runtime.Managers
 {
     public class AtmManager : MonoBehaviour
     {
-        #region self variables
+        #region Self Variables
 
-        #region serialized variables
+        #region Serialized Variables
 
-        
-        [SerializeField]private DOTweenAnimation doTweenAnimation;
-
-        [SerializeField] private TextMeshPro scoreText;
+        [SerializeField] private DOTweenAnimation doTweenAnimation;
+        [SerializeField] private TextMeshPro atmText;
 
         #endregion
 
@@ -42,7 +40,7 @@ namespace Runtime.Managers
             AtmSignals.Instance.onSetAtmScoreText += OnSetAtmScoreText;
         }
 
-      
+
         private void OnAtmTouched(GameObject touchedATMObject)
         {
             if (touchedATMObject.GetInstanceID() == gameObject.GetInstanceID())
@@ -50,21 +48,21 @@ namespace Runtime.Managers
                 doTweenAnimation.DOPlay();
             }
         }
+
         private void OnSetAtmScoreText(int value)
         {
-            scoreText.text = value.ToString();
+            atmText.text = value.ToString();
         }
-
 
         private void UnSubscribeEvents()
         {
-            throw new NotImplementedException();
+            CoreGameSignals.Instance.onAtmTouched -= OnAtmTouched;
+            AtmSignals.Instance.onSetAtmScoreText -= OnSetAtmScoreText;
         }
+
         private void OnDisable()
         {
             UnSubscribeEvents();
         }
-
-      
     }
 }

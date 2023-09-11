@@ -1,5 +1,6 @@
 using System;
 using Cinemachine;
+using Runtime.Controllers.MiniGame;
 using Runtime.Enums;
 using Runtime.Signals;
 using Sirenix.OdinInspector;
@@ -51,8 +52,6 @@ namespace Runtime.Managers
             CameraSignals.Instance.onChangeCameraState += OnChangeCameraState;
         }
 
-        
-
         private void OnSetCinemachineTarget(CameraTargetState state)
         {
             switch (state)
@@ -62,36 +61,39 @@ namespace Runtime.Managers
                     var playerManager = FindObjectOfType<PlayerManager>().transform;
                     stateDrivenCamera.Follow = playerManager;
                 }
-                break;
+                    break;
                 case CameraTargetState.FakePlayer:
                 {
                     stateDrivenCamera.Follow = null;
-                 //   var fakePlayer = FindObjectOfType<WallCheckController>().transform.parent.transform;
-                   // stateDrivenCamera.Follow = fakePlayer;
+                    var fakePlayer = FindObjectOfType<WallCheckController>().transform.parent.transform;
+                    stateDrivenCamera.Follow = fakePlayer;
                 }
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(state), state, null);
             }
         }
+
         private void OnChangeCameraState(CameraStates state)
         {
-           animator.SetTrigger(state.ToString());
+            animator.SetTrigger(state.ToString());
         }
+
         private void UnsubscribeEvents()
         {
             CoreGameSignals.Instance.onReset -= OnReset;
             CameraSignals.Instance.onSetCinemachineTarget -= OnSetCinemachineTarget;
             CameraSignals.Instance.onChangeCameraState -= OnChangeCameraState;
         }
+
         private void OnDisable()
         {
             UnsubscribeEvents();
         }
 
-    
-
         #endregion
+
+
         private void OnReset()
         {
             CameraSignals.Instance.onChangeCameraState?.Invoke(CameraStates.Initial);
@@ -101,44 +103,3 @@ namespace Runtime.Managers
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

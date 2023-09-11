@@ -57,7 +57,7 @@ namespace Runtime.Managers
         private void OnSetAtmScore(int atmValues)
         {
             _atmScoreValue += atmValues * _stackValueMultiplier;
-           // AtmSignals.Instance.onSetAtmScoreText?.Invoke(_atmScoreValue);
+            AtmSignals.Instance.onSetAtmScoreText?.Invoke(_atmScoreValue);
         }
 
         private void OnSetValueMultiplier()
