@@ -15,6 +15,6 @@ MonoBehaviour:
   Data:
     HorizontalInputSpeed: 2
     HorizontalInputClampNegativeSides:
-      x: -3
-      y: 3
-    HorizontalInputClampStopValue: 2
+      x: -5
+      y: 5
+    HorizontalInputClampStopValue: 0.007

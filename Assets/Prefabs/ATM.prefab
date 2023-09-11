@@ -381,7 +381,8 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e9de99d703fe85449bc5becac4762579, type: 2}
-  m_sharedMaterial: {fileID: -6360588970910393389, guid: e9de99d703fe85449bc5becac4762579, type: 2}
+  m_sharedMaterial: {fileID: -6360588970910393389, guid: e9de99d703fe85449bc5becac4762579,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -483,7 +484,7 @@ Transform:
   - {fileID: 4616038259902264587}
   - {fileID: 8586151888483081435}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &8026992520538170506
 BoxCollider:
@@ -493,9 +494,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8026992520538170507}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 4.15, y: 6, z: 4.14}
   m_Center: {x: 0, y: 3.5, z: 0}
 --- !u!114 &8026992520538170505
@@ -507,7 +516,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8026992520538170507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47f0deb5fb6649a894ff1f994af77153, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f9e21b61c6f4268b18650f387d310cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   doTweenAnimation: {fileID: 6851581740872364729}

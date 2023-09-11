@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Conveyor
+  - ATM
+  - Obstacle
+  - Gate
+  - Collectable
+  - FakePlayer
+  - Wall
+  - Collected
+  - CollectableUpdater
   layers:
   - Default
   - TransparentFX
